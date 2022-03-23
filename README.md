@@ -2,6 +2,6 @@
 This project was given to improve myself in internship.
 
 ## Live Demo
-    [Go to the Demo](https://bkm-e-commerce.netlify.app/)
+[Go to the Demo](https://bkm-e-commerce.netlify.app/)
 ## Figma File
-    ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+[Go to the Figma File](https://www.figma.com/file/QJmZA0Vou2krgCJVZ6MkKJ/E-Commerce-Mockup?node-id=47%3A460)
