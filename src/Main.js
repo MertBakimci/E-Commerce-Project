@@ -1,11 +1,15 @@
+import { useEffect } from "react";
 import { Flex } from "./assets/style/style";
+import Navbar from "./components/Navbar";
 
 const Main = () => {
+  useEffect(() => {
+    document.body.classList = "light";
+  }, [])
+  
   return (
     <div className="container">
-      <Flex  justifyCenter alignCenter>
-       <h1> WELCOME &#127881;</h1>
-      </Flex>
+      <Navbar/>
     </div>
   );
 }
