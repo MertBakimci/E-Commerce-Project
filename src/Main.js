@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { Flex } from "./assets/style/style";
+import { Divider, Flex } from "./assets/style/style";
+import BannerSlider from "./components/Content/BannerSlider";
+import ProductBoxes from "./components/Content/ProductBoxes";
 import Navbar from "./components/Navbar";
 
 const Main = () => {
@@ -10,6 +12,9 @@ const Main = () => {
   return (
     <div className="container">
       <Navbar/>
+      <Divider/>
+      <BannerSlider/>
+      <ProductBoxes/>
     </div>
   );
 }
