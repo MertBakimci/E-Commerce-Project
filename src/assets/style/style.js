@@ -150,7 +150,7 @@ export const ProductBannerBox = styled.div`
   align-items: center;
 
   .item-img {
-    
+    padding-right: 20px;
     img {
       width:100%;
       object-fit: cover;
@@ -190,6 +190,9 @@ export const ProductBannerBox = styled.div`
   @media (max-width : 1000px) {
     flex-direction: column;
     gap: 20px;
+    .item-img {
+      padding:0;
+    }
     .title {
       width: 100%;
       text-align: center;
