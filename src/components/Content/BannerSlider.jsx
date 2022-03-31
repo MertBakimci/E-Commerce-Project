@@ -33,8 +33,6 @@ const BannerSlider = () => {
           },
         }}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       navigation={true}
     >
     {sliderItems.map((item,index) => (

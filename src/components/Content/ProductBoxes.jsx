@@ -1,5 +1,6 @@
 import {
     Container,
+  Flex,
   ProductBannerBox,
   ProductBoxContainer,
 } from "../../assets/style/style";
@@ -11,7 +12,7 @@ const ProductBoxes = () => {
       href: "#",
       img: "https://i.hizliresim.com/ctsetwt.png",
       header:"TECHNOLOGY",
-      title:"APPLE-SAMSUNG-BOSE-PHILIPS "
+      title:"APPLE-SAMSUNG-BOSE-PHILIPS ",
     },
     {
       name: "woman",
@@ -27,15 +28,26 @@ const ProductBoxes = () => {
       header:"MEN'S",
       title:"CLOTHING"
     },
+    {
+      name: "kids",
+      href: "#",
+      img: "https://i.hizliresim.com/mw2zyn8.png",
+      header:"KID'S",
+      title:"CLOTHING",
+      discount: "25%"
+    },
   ];
 
   return (
    <Container>
         <ProductBoxContainer>
       {bannerProductItems.map((item,index) => (
-        <ProductBannerBox>
-            <img src={item.img} alt="" />
-            <div className="title">
+        <ProductBannerBox key={index}>
+           <div className="item-img">
+           <img  src={item.img} alt="" />
+           </div>
+            {item.discount && <Flex className="discount-banner" flexCol alignCenter><p>{item.discount}</p><p>DISCOUNT</p></Flex> }
+            <div className={`title ${item.discount ? "have-discount" : ""}`} >
                 <h1>{item.header}</h1>
                 <p>{item.title}</p>
             </div>

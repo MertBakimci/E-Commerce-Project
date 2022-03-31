@@ -18,6 +18,7 @@ margin: 0 auto;
 export const Flex = styled.div`
   display: flex;
   align-items: center;
+  overflow:hidden;
   height: 100%;
   flex-direction: ${(props) =>
     props.flexRow ? "row" : (props) => (props.flexCol ? "column" : "row")};
@@ -131,50 +132,71 @@ export const ProductBoxContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top:100px;
+  margin-top: 100px;
   width: 100%;
   padding: 20px 0;
   gap: 80px 10px;
+  @media (max-width : 500px) {
+    gap: 30px 10px;
+  }
 `;
 export const ProductBannerBox = styled.div`
-  display:flex; 
   width: 100%;
-  position:relative;
-  padding: 20px 20px;
-  height: 360px;
-  justify-content: space-between;
-  background: var(--productBannerBoxColor);
-  border: 1px solid var(--productBorderColor);
- text-align: right;
- cursor:pointer;
- transition:0.1s ease-in-out;
-  &:first-child {
-    padding:0 20px;
-    p {
-      font-size:1.5rem;
+  display: flex;
+  padding: 20px;
+  background-color: var(--productBannerBoxColor);
+  border:1px solid var(--productBorderColor);
+  justify-content:space-between;
+  align-items: center;
+
+  .item-img {
+    
+    img {
+      width:100%;
+      object-fit: cover;
     }
   }
-  img {
-    object-fit-cover;
+  .title {
+    width: clamp(100px,30%,400px);
+    text-align: right;
+    &.have-discount{
+     
+    }
+  }
+  .discount-banner {
+    p{
+      font-size: clamp(1rem,3vw, 60px);
+    }
   }
   h1 {
-    margin-top:40px;
-    font-size: 62px;
-    margin-bottom: -15px;
-    font-weight:400;
+    font-size: clamp(1rem,3vw, 60px);
+  } p {
+    font-size: clamp(0.5rem, 1.5vw, 30px)
   }
-  p {
-    font-size:66px;
-    font-weight: 200;
+  &:nth-child(2),&:nth-child(3) {
+    width: calc(47% - 10px);                                                                                                                                                                                                                                                                             
   }
-  &:nth-child(n+2) {
-    width:47%;
+  &:nth-child(3) {
+    margin-left: auto;                                                                                                                                                                                                                                                                            
   }
-  &:nth-child(1n + 3) {
-    margin-left: auto
+  @media (max-width : 1000px) {
+    flex-direction: column;
+    justify-cotnent: space-evenly;
+    gap: 15px;
+    .title {
+      text-align: center;
+    }
   }
-  &:hover {
-    background: var(--gray);
-    border-color: var(--mainColor);
+  @media (max-width : 500px) {
+    &:nth-child(2),&:nth-child(3) {
+      width: 100%; 
+      .item-img {
+    
+        img {
+          width:100%;
+          object-fit: cover;
+        }
+      }                                                                                                                                                                                                                                                                           
+    }
   }
 `;
