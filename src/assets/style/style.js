@@ -148,7 +148,11 @@ export const ProductBannerBox = styled.div`
   border:1px solid var(--productBorderColor);
   justify-content:space-between;
   align-items: center;
-
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    border: 1px solid var(--mainColor);
+  }
   .item-img {
     padding-right: 20px;
     img {
@@ -207,7 +211,6 @@ export const ProductBannerBox = styled.div`
     &:nth-child(2),&:nth-child(3) {
       width: 100%; 
       .item-img {
-    
         img {
           width:100%;
           object-fit: cover;
@@ -215,4 +218,5 @@ export const ProductBannerBox = styled.div`
       }                                                                                                                                                                                                                                                                           
     }
   }
+ 
 `;
