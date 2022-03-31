@@ -46,7 +46,7 @@ const ProductBoxes = () => {
            <div className="item-img">
            <img  src={item.img} alt="" />
            </div>
-            {item.discount && <Flex className="discount-banner" flexCol alignCenter><p>{item.discount}</p><p>DISCOUNT</p></Flex> }
+            {item.discount && <Flex className="discount-banner" flexCol alignCenter justifyCenter><span>{item.discount}</span><p>DISCOUNT</p></Flex> }
             <div className={`title ${item.discount ? "have-discount" : ""}`} >
                 <h1>{item.header}</h1>
                 <p>{item.title}</p>

@@ -159,19 +159,27 @@ export const ProductBannerBox = styled.div`
   .title {
     width: clamp(100px,30%,400px);
     text-align: right;
+    width: fit-content;
     &.have-discount{
      
     }
   }
   .discount-banner {
+    padding: 0 50px;
+    gap:0;
+    span {
+      margin:0;
+      margin-bottom -20px;
+      font-size: clamp(1.5rem,6vw,7rem)
+    }
     p{
       font-size: clamp(1rem,3vw, 60px);
     }
   }
   h1 {
-    font-size: clamp(1rem,3vw, 60px);
+    font-size: clamp(2rem,3vw, 60px);
   } p {
-    font-size: clamp(0.5rem, 1.5vw, 30px)
+    font-size: clamp(1.2rem, 1.5vw, 30px)
   }
   &:nth-child(2),&:nth-child(3) {
     width: calc(47% - 10px);                                                                                                                                                                                                                                                                             
@@ -181,11 +189,16 @@ export const ProductBannerBox = styled.div`
   }
   @media (max-width : 1000px) {
     flex-direction: column;
-    justify-cotnent: space-evenly;
-    gap: 15px;
+    gap: 20px;
     .title {
+      width: 100%;
       text-align: center;
     }
+    .discount-banner {
+      span {
+        margin-bottom 0px;
+        font-size: clamp(1.5rem,6vw,7rem)
+      }
   }
   @media (max-width : 500px) {
     &:nth-child(2),&:nth-child(3) {
