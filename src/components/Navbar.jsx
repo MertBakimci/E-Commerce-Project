@@ -53,7 +53,7 @@ const linkItems = [
           
           : 
           
-          <Flex className="w-full" justifyBetween >
+          <Flex className="w-full" justifyBetween alignCenter >
             <BrandName className="w-full">SHOPY</BrandName>
            
             <SearchBar className="grayBg">

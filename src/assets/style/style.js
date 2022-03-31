@@ -154,7 +154,7 @@ export const ProductBannerBox = styled.div`
     border: 1px solid var(--mainColor);
   }
   .item-img {
-    padding-right: 20px;
+    padding-right: 50px;
     img {
       width:100%;
       object-fit: cover;
