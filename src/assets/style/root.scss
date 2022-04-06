@@ -52,9 +52,24 @@ nav {
   padding: 30px 0 10px 0;
 }
 
+footer {
+  background-color: var(--mainColor);
+  color: var(--primaryColor);
+  padding: 50px 0;
+  margin-top: 100px;
 
-.grayBg {
+}
 
+.color-primary {
+  color: var(--primaryColor) !important;
+}
+
+.divider-primary {
+  border-color: var(--primaryColor) !important;
+  opacity: 0.2 !important;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .gap-5 {
@@ -73,8 +88,19 @@ nav {
   gap: 20px;
 }
 
+.gap-40 {
+  gap:40px;
+}
+
 .w-full {
   width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+.text-center {
+  text-align: center;
 }
 
 
@@ -100,7 +126,20 @@ nav {
 
 }
 
-.nav-links {
+.nav-links-container {
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center !important;
+  padding-bottom: 15px;
+  overflow-x: auto;
+ 
+@media (max-width: 500px) {
+  justify-content: flex-start !important;
+}
+}
+
+ .nav-links {
   text-transform: uppercase;
   transition: 0.1s ease-in-out;
   padding: 0 15px;
@@ -126,5 +165,36 @@ nav {
   &:after {
     font-size: 20px;
     color: var(--mainColor)
+  }
+}
+
+.footer-links {
+  @media (max-width: 1000px) {
+    flex-direction: column !important;
+    gap: 30px;
+    justify-content: center; 
+    h1 {
+        text-align: center !important;
+      }
+    & > div {
+      text-align: center;
+      justify-content: center !important;
+     
+    }
+  }
+  
+}
+
+.subscribe-button {
+  @media (max-width: 1000px) {
+  flex-wrap: wrap;
+  padding: 5px !important;
+  button {
+    width: 100%;
+    padding: 10px 0 !important;
+  } input {
+    font-size: 1.2rem !important;
+    text-align: center !important;
+  }
   }
 }

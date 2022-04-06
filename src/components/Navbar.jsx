@@ -77,7 +77,7 @@ const linkItems = [
             </Flex>
           }
            
-            <Flex justifyCenter alignCenter className="gap-5">
+            <Flex justifyCenter alignCenter className="gap-5 nav-links-container">
                 {linkItems.map((item,index) => (
                     <a className="nav-links" href={item.href}>{item.name}</a>
                 ))}

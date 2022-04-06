@@ -18,7 +18,6 @@ margin: 0 auto;
 export const Flex = styled.div`
   display: flex;
   align-items: center;
-  overflow:hidden;
   height: 100%;
   flex-direction: ${(props) =>
     props.flexRow ? "row" : (props) => (props.flexCol ? "column" : "row")};
@@ -43,6 +42,7 @@ export const Flex = styled.div`
           props.alignStart
             ? "flex-start"
             : (props) => (props.alignStart ? "flex-end" : "")};
+       
 `;
 
 export const FlexButton = styled.button`
@@ -86,13 +86,12 @@ export const SearchBar = styled.label`
   justify-content: space-between;
   width: clamp(200px, 100%, 500px);
   background-color: var(--gray);
-  padding: 20px 3px 20px 0px;
+  padding: 5px 3px 5px 0px;
   height: 100%;
   width: 100%;
   border-radius: 5px;
   border: 2px solid var(--gray);
   transition: all 0.3s ease-in-out;
-  max-height: 40px;
 
   input {
     background-color: transparent;
@@ -101,6 +100,7 @@ export const SearchBar = styled.label`
     border: 0;
     text-indent: 10px;
     font-size: 16px;
+    height:40px;
   }
   button {
     height: 100%;
@@ -108,6 +108,9 @@ export const SearchBar = styled.label`
     transition: 0.1s ease-in-out;
     background-color: var(--mainColor);
     color: #fff;
+    font-size: 1rem;
+    height: 100%;
+    font-weight: 400;
     padding: 5px 15px;
     cursor: pointer;
     border: 0.1rem solid var(--mainColor);
@@ -120,7 +123,7 @@ export const SearchBar = styled.label`
     }
   }
   &:focus-within {
-    border: 0.1rem solid black;
+    border: 2px solid var(--mainColor);
   }
 `;
 
