@@ -223,3 +223,54 @@ export const ProductBannerBox = styled.div`
   }
  
 `;
+
+
+export const ProductCard = styled.div`
+
+display:flex;
+flex-direction: column;
+align-items:center;
+justify-content:flex-start;
+max-width: 360px;
+width:90%;
+padding: 15px 0;
+height: 580px;
+border: 1px solid var(--productBorderColor);
+border-radius:10px;
+.divider-primary {
+  border-color: var(--productBorderColo) !important;
+}
+ .name {
+   font-size: 2rem;
+ }
+
+ .image {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 90%;
+  height:320px;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+ }
+
+ .details {
+  width:90%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+   span {
+     font-size: 2.5rem;
+   }
+   button {
+     width: 100%;
+     border-radius:10px;
+     background-color:var(--mainColor);
+     padding: 5px 20px;
+     color: white;
+   }
+ }
+`;
