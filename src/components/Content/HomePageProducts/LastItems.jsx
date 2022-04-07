@@ -39,6 +39,20 @@ const LastItems = () => {
           modules={[Navigation]}
           spaceBetween={50}
           slidesPerView={4}
+          breakpoints={{
+            0: {
+              width: 0,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            1200: {
+              width: 1200,
+              slidesPerView: 3,
+            },
+          }}
           prevButton=".swiper-prev"
 	nextButton=".swiper-next"
           onSwiper={(swiper) => console.log(swiper)}
