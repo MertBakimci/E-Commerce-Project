@@ -237,11 +237,18 @@ padding: 15px 0;
 height: 580px;
 border: 1px solid var(--productBorderColor);
 border-radius:10px;
+transition: 0.1s ease-in-out;
 .divider-primary {
+  transition: 0.1s ease-in-out;
   border-color: var(--productBorderColo) !important;
 }
  .name {
    font-size: 2rem;
+   margin-bottom:10px;
+   cursor: pointer;
+   &:hover {
+     text-decoration: underline;
+   }
  }
 
  .image {
@@ -250,15 +257,18 @@ border-radius:10px;
   justify-content:center;
   width: 90%;
   height:320px;
+  cursor:pointer;
   img {
     width: 100%;
     object-fit: cover;
   }
+
  }
 
  .details {
   width:90%;
   display:flex;
+  gap: 7px;
   align-items:center;
   justify-content:center;
   flex-direction:column;
@@ -266,11 +276,35 @@ border-radius:10px;
      font-size: 2.5rem;
    }
    button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
      width: 100%;
      border-radius:10px;
      background-color:var(--mainColor);
-     padding: 5px 20px;
+     padding: 4px 20px;
+     border: 2px solid var(--mainColor);
      color: white;
+     cursor:pointer;
+     transition: 0.1s ease-in-out;
+     &:hover,&:focus {
+       background-color:transparent;
+       color: var(--mainColor);
+     }
    }
  }
+ &:hover {
+   border: 1px solid var(--mainColor);
+   .divider-primary {
+    border-color: var(--mainColor) !important;
+    opacity: 0.5 !important;
+  }
+ }
+`;
+
+export const Header = styled.h1`
+
+font-size: clamp(2rem,3vw, 60px);
+white-space:nowrap;
+
 `;
