@@ -28,7 +28,7 @@ const Footer = () => {
                     <Flex justifyCenter alignCenter className="gap-10 w-full flex-wrap">
                 {linkItems.map((item,index) => (
                     <a className="nav-links color-primary" href={item.href}>{item.name}</a>
-                ))}
+                ))} 
             </Flex>
             <Flex justifyEnd alignCenter className="gap-10 w-full ">
                <RiMastercardFill size={48}/>

@@ -12,8 +12,8 @@ import { Navigation } from "swiper";
 const BannerSlider = () => {
 
     const sliderItems = [
-        {name:"For Man",href:"#",img:"http://customizesportsuniforms.com/_admin/pictures/29_banner.jpg"},
-        {name:"For Woman",href:"#",img:"https://www.livafluidfashion.com/birlaliva_cms/data_content/page_img/Western-ware-banner2.jpg"},
+        {name:"For Man",href:"#",img:"http://www.shopatkerala.com/uploads/client_banner/banner_2514.jpg"},
+        {name:"For Woman",href:"#",img:"https://i0.wp.com/bhaviniparis.com/wp-content/uploads/2021/10/website-banner-3-1-scaled.jpg?fit=2560%2C877&ssl=1"},
     ]
 
 
@@ -32,11 +32,12 @@ const BannerSlider = () => {
             translate: ["100%", 0, 0],
           },
         }}
+        className="banner-slider"
       slidesPerView={1}
       navigation={true}
     >
     {sliderItems.map((item,index) => (
-        <SwiperSlide className="slide-item">
+        <SwiperSlide className="slide-item ">
             <a href={item.href} key={index}>
             <img src={item.img} alt="" />
             </a>

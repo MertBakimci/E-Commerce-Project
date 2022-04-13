@@ -147,6 +147,7 @@ export const ProductBannerBox = styled.div`
   width: 100%;
   display: flex;
   padding: 20px;
+  border-radius: 5px;
   background-color: var(--productBannerBoxColor);
   border:1px solid var(--productBorderColor);
   justify-content:space-between;
@@ -266,7 +267,7 @@ transition: 0.1s ease-in-out;
  }
 
  .details {
-  width:90%;
+  width:70%;
   display:flex;
   gap: 7px;
   align-items:center;

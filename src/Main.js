@@ -18,9 +18,10 @@ const Main = () => {
       <Divider/>
       <BannerSlider/>
 
-      <ProductBoxes/>
-      <LastItems/>
+      <ProductBoxes/> 
       <PopularProducts/>
+      <LastItems/>
+     
       <Footer/>
     </div>
   );
