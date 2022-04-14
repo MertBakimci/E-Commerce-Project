@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --mainColor: #000;
@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: var(--primarycolor);
 }
 
@@ -266,7 +266,7 @@ align-items:center;
 justify-content:flex-start;
 width: 100%;
 padding: 15px 0;
-height: 580px;
+height: 570px;
 border: 1px solid var(--productBorderColor);
 border-radius:10px;
 transition: 0.1s ease-in-out;
@@ -274,21 +274,22 @@ transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
   border-color: var(--productBorderColo) !important;
 }
- .name {
-   font-size: 2rem;
+ .product-name {
+   font-size: 2rem !important;
    margin-bottom:10px;
+   font-weight: 400 !important;
    cursor: pointer;
    &:hover {
      text-decoration: underline;
    }
  }
 
- .image {
+.image {
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 90%;
-  height:320px;
+  width: 70%;
+  height:300px;
   cursor:pointer;
   img {
 
@@ -307,6 +308,7 @@ transition: 0.1s ease-in-out;
   flex-direction:column;
    span {
      font-size: 2.5rem;
+     font-weight: 600;
    }
    button {
     display:flex;
@@ -315,7 +317,7 @@ transition: 0.1s ease-in-out;
      width: 100%;
      border-radius:10px;
      background-color:var(--mainColor);
-     padding: 4px 20px;
+     padding: 5px 30px;
      border: 2px solid var(--mainColor);
      color: white;
      cursor:pointer;
@@ -332,6 +334,24 @@ transition: 0.1s ease-in-out;
     border-color: var(--mainColor) !important;
     opacity: 0.5 !important;
   }
+ }
+ @media (min-width: 1000px) {
+   height: 500px;
+    .details {
+      height: 80px;
+      button {display: none;
+        padding: 10px 30px;
+      }
+      .divider-primary {
+        display: none;
+      }
+    }
+    &:hover {
+      .details {
+        span {display:none; }
+        button {display:flex}
+      }
+    }
  }
 }
 
@@ -366,3 +386,5 @@ transition: 0.1s ease-in-out;
 .details {
   width: 70% !important;
 }
+
+

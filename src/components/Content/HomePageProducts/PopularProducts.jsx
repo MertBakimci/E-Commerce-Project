@@ -3,15 +3,15 @@ import {
   Divider,
   Flex,
   Header,
-  ProductCard,
 } from "../../../assets/style/style";
-import { RiShoppingBasketLine } from "react-icons/ri";
+
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { Navigation, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useRef } from "react";
+import ProductBoxInner from "../ProductBox/ProductBoxInner";
 
 const PopularProducts = () => {
   const sliderRef = useRef(null);
@@ -146,22 +146,7 @@ const PopularProducts = () => {
         >
           {popularProducts.map((product, index) => (
              <SwiperSlide key={index} className="product-card">
-             <h1 className="product-name text-center">{product.name}</h1>
-             <Divider className="divider-primary w-full" />
-             <div className="image">
-               <img
-                 src={product.img}
-                 alt={product.name}
-               />
-             </div>
-             <Divider className="divider-primary w-full" />
-             <div className="details">
-               <span>{product.price}$</span>
-               <Divider className="divider-primary w-full" />
-               <button>
-                 <RiShoppingBasketLine size={36} />
-               </button>
-             </div>
+            <ProductBoxInner product={product}/>
            </SwiperSlide>
           ))}
         </Swiper>
