@@ -9,6 +9,7 @@
   --productBannerBoxColor: #F4F4F4;
   --productBorderColor: #C0C0C0;
   --productBorderColor: #cbcbcb;
+  
 }
 
 .light {
@@ -30,6 +31,68 @@ body {
   background-color: var(--primarycolor);
 }
 
+/* --LOADER-- */
+.popular-items .lds-ellipsis {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  height: 570px;
+  @media (min-width: 1000px) {
+    height: 500px;
+  }
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 50%;
+  width:15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
 button {
   appearance: none;
   outline: none;
@@ -49,7 +112,9 @@ span {
  
 }
 
-
+.border-0 {
+  border: none !important;
+}
 
 nav {
   padding: 30px 0 10px 0;
@@ -106,9 +171,21 @@ footer {
   text-align: center;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 
 .banner-slider {
-  aspect-ratio: 3/1;
+  aspect-ratio: 3.5/1;
+}
+
+.banner-slider-image {
+  height: 100%;  
+}
+
+.slide-item {
+  height: 100%;
 }
 
 
@@ -388,3 +465,28 @@ transition: 0.1s ease-in-out;
 }
 
 
+/* ---COLLAPSE--- */
+
+.collapsible {
+  background-color: var(--gray);
+  color: var(--mainColor);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}

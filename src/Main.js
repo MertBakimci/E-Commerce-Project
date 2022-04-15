@@ -1,13 +1,15 @@
 import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import { Divider, Flex } from "./assets/style/style";
-import BannerSlider from "./components/Content/BannerSlider";
-import LastItems from "./components/Content/HomePageProducts/LastItems";
-import PopularProducts from "./components/Content/HomePageProducts/PopularProducts";
-import ProductBoxes from "./components/Content/ProductBoxes";
+import HomePage from "./components/Content/HomePage";
+import NotFound from "./components/Content/NotFound";
+import Panel from "./components/Content/Panel";
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 const Main = () => {
+
   useEffect(() => {
     document.body.classList = "light";
   }, [])
@@ -16,12 +18,11 @@ const Main = () => {
     <div className="container">
       <Navbar/>
       <Divider/>
-      <BannerSlider/>
-
-      <ProductBoxes/> 
-      <PopularProducts/>
-      <LastItems/>
-     
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="*" element={<NotFound/>}/>
+        <Route path="/admin-panel" element={<Panel/>}/>
+      </Routes>
       <Footer/>
     </div>
   );

@@ -90,7 +90,7 @@ export const SearchBar = styled.label`
   height: 100%;
   width: 100%;
   border-radius: 5px;
-  border: 2px solid var(--gray);
+  border: 2px solid var(--productBorderColor);
   transition: all 0.3s ease-in-out;
 
   input {

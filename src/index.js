@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import Main from './Main';
 import './index.css';
 import './assets/style/root.scss';
-
+import { BrowserRouter } from 'react-router-dom';
+import store from "./redux/store"
+import { Provider } from 'react-redux'
 ReactDOM.render(
-  <React.StrictMode>
+  
+  <Provider store={store}>
+    <BrowserRouter>
     <Main />
-  </React.StrictMode>,
+  </BrowserRouter>
+  </Provider>,
   document.getElementById('main-container')
 );
 

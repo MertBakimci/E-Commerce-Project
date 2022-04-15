@@ -32,6 +32,7 @@ const BannerSlider = () => {
             translate: ["100%", 0, 0],
           },
         }}
+        speed={700}
         className="banner-slider"
       slidesPerView={1}
       navigation={true}
@@ -39,7 +40,7 @@ const BannerSlider = () => {
     {sliderItems.map((item,index) => (
         <SwiperSlide className="slide-item ">
             <a href={item.href} key={index}>
-            <img src={item.img} alt="" />
+            <img src={item.img} className="banner-slide-image" alt="" />
             </a>
         </SwiperSlide>
     ))}
